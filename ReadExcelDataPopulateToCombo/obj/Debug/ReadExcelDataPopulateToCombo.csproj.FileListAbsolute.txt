@@ -1,0 +1,9 @@
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\bin\Debug\ReadExcelDataPopulateToCombo.exe.config
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\obj\Debug\ReadExcelDataPopulateToCombo.csprojResolveAssemblyReference.cache
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\obj\Debug\ReadExcelDataPopulateToCombo.Form1.resources
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\obj\Debug\ReadExcelDataPopulateToCombo.Properties.Resources.resources
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\obj\Debug\ReadExcelDataPopulateToCombo.csproj.GenerateResource.Cache
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\bin\Debug\ReadExcelDataPopulateToCombo.exe
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\bin\Debug\ReadExcelDataPopulateToCombo.pdb
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\obj\Debug\ReadExcelDataPopulateToCombo.exe
+C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToCombo\ReadExcelDataPopulateToCombo\obj\Debug\ReadExcelDataPopulateToCombo.pdb
