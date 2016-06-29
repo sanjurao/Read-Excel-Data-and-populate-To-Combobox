@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
+using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -17,10 +18,12 @@ namespace ReadExcelDataPopulateToCombo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ReadExcelAndBuildDataTable();
+            ReadExcelAndBuildDataTable();                    
             comboBox1.DataSource = table;
             comboBox1.DisplayMember = "Stud Bolt Size";
             comboBox1.ValueMember = "Value";
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,11 +61,11 @@ namespace ReadExcelDataPopulateToCombo
                 table.Rows.Add(dataRow);
 
             }
-            xlWorkBook.Close(true, null, null);
-            xlApp.Quit();
-            releaseObject(xlWorkSheet);
-            releaseObject(xlWorkBook);
-            releaseObject(xlApp);
+            //xlWorkBook.Close(true, null, null);
+            //xlApp.Quit();
+            //releaseObject(xlWorkSheet);
+            //releaseObject(xlWorkBook);
+            //releaseObject(xlApp);
         }
         private void releaseObject(object obj)
         {
@@ -80,6 +83,34 @@ namespace ReadExcelDataPopulateToCombo
             {
                 GC.Collect();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (comboBox1.SelectedIndex > 0)
+            {
+                var vrow = comboBox1.SelectedItem as DataRowView;
+                var col = vrow.DataView.Table.Columns;
+                var row = vrow.Row;
+                StringBuilder sb = new StringBuilder();
+                sb.Append("\n ======== Selected Combo box other vales are ===========\n");             
+                for (int i = 0; i < col.Count; i++)
+                {
+                    sb.Append(string.Format("\n {0} : {1}\n", col[i], row[i]));
+                }
+                SaveToFile(sb.ToString());
+            }
+            
+
+            
+        }
+
+        private void SaveToFile(string sb)
+        {
+            System.IO.TextWriter w = new System.IO.StreamWriter(@"C:\D\Work\Project\SpeachReconition\ReadExcelDataPopulateToComboBox\ReadExcelDataPopulateToCombo\Data\LogStringBuilder.txt");
+            w.Write(sb.ToString());
+            w.Flush();
+            w.Close();
         }
 
     }
